@@ -1,0 +1,53 @@
+/*************************************************************************
+  Copyright 2017 Antoine FLORENTIN
+
+  This file is part of Snell-Descartes.
+
+  Snell-Descartes is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Snell-Descartes is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Snell-Descartes.  If not, see <http://www.gnu.org/licenses/>.
+
+*************************************************************************/
+
+
+
+//this will set your .exe icon
+A ICON MOVEABLE PURE LOADONCALL DISCARDABLE "snelldescartes.ico"
+
+//include version information in .exe, modify these values to match your needs
+1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+//FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+	 {
+		 BLOCK "040904E4"
+		 {
+			 VALUE "CompanyName", "Antoine FLORENTIN"
+			 VALUE "FileVersion", ""
+			 VALUE "FileDescription", "Loi de Snell-Descartes"
+			 VALUE "InternalName", ""
+			 VALUE "LegalCopyright", "Antoine FLORENTIN"
+			 VALUE "LegalTrademarks", ""
+			 VALUE "OriginalFilename", ""
+			 VALUE "ProductName", "Snell-Descartes"
+			 VALUE "ProductVersion", "1.0"
+		 }
+	 }
+  BLOCK "VarFileInfo"
+	 {
+		 VALUE "Translation", 0x040C, 1252 //language codes
+	 }
+}
+
+
