@@ -25,7 +25,8 @@ Vous aurez besoin que la librairie gtk3 soit installée sur votre système.
 Compilation :
 -------------
 
-Sous linux utiliser la commande  
+Sous linux utiliser la commande
+
 $ make -f Makefile.gcc
 
 
