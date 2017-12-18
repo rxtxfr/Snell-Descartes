@@ -24,7 +24,7 @@
 #include <gtk/gtk.h>
 
 #define STR_SIZE	16
-#define VITESSE_MIN		1
+#define VITESSE_MIN		10
 #define VITESSE_MAX		300000000
 
 void check_arcs_clicked(GtkEditable *editable, gpointer user_data);
