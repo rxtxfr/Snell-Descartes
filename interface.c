@@ -106,8 +106,10 @@ GtkWidget* create_window (void)
 	gtk_widget_show (widget->hbox13);
 	gtk_box_pack_start (GTK_BOX (widget->vbox4), widget->hbox13, TRUE, TRUE, 0);
 
+<<<<<<< HEAD
 	widget->barre_V1 = gtk_scale_new_with_range( GTK_ORIENTATION_HORIZONTAL, VITESSE_MIN, VITESSE_MAX, 1000);
 	gtk_range_set_value( GTK_RANGE(widget->barre_V1), VITESSE_MAX );
+>>>>>>> 793cf93b23e2189ab802efa60fa75f23ccfaabee
 	gtk_scale_set_draw_value(GTK_SCALE(widget->barre_V1) , FALSE);
 	gtk_scale_set_digits(GTK_SCALE(widget->barre_V1), 0);
 
@@ -177,8 +179,10 @@ GtkWidget* create_window (void)
 	gtk_widget_show (widget->hbox11);
 	gtk_box_pack_start (GTK_BOX (widget->hbox7), widget->hbox11, TRUE, TRUE, 0);
 
+<<<<<<< HEAD
 	widget->barre_V2 = gtk_scale_new_with_range( GTK_ORIENTATION_HORIZONTAL, VITESSE_MIN, VITESSE_MAX, 1000);
 	gtk_range_set_value( GTK_RANGE(widget->barre_V2), VITESSE_MAX );
+>>>>>>> 793cf93b23e2189ab802efa60fa75f23ccfaabee
 	gtk_scale_set_draw_value(GTK_SCALE(widget->barre_V2) , FALSE);
 	gtk_scale_set_digits(GTK_SCALE(widget->barre_V2), 0);
 
