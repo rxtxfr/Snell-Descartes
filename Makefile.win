@@ -45,7 +45,7 @@ OBJ_DEBUG = $(OBJDIR_DEBUG)/gtk_repere.o $(OBJDIR_DEBUG)/interface.o $(OBJDIR_DE
 
 OBJ_RELEASE = $(OBJDIR_RELEASE)/gtk_repere.o $(OBJDIR_RELEASE)/interface.o $(OBJDIR_RELEASE)/callbacks.o $(OBJDIR_RELEASE)/main.o $(OBJDIR_RELEASE)/ressource.res
 
-RESSOURCE=ressources.rc
+RESSOURCE=src/ressources.rc
 
 
 all: debug release
@@ -63,17 +63,17 @@ debug: before_debug out_debug after_debug
 out_debug: before_debug $(OBJ_DEBUG) $(DEP_DEBUG)
 	$(LD) $(LIBDIR_DEBUG) -o $(OUT_DEBUG) $(OBJ_DEBUG)  $(LDFLAGS_DEBUG) $(LIB_DEBUG)
 
-$(OBJDIR_DEBUG)/gtk_repere.o: gtk_repere.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c gtk_repere.c -o $(OBJDIR_DEBUG)/gtk_repere.o
+$(OBJDIR_DEBUG)/gtk_repere.o: src/gtk_repere.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/gtk_repere.c -o $(OBJDIR_DEBUG)/gtk_repere.o
 
-$(OBJDIR_DEBUG)/interface.o: interface.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c interface.c -o $(OBJDIR_DEBUG)/interface.o
+$(OBJDIR_DEBUG)/interface.o: src/interface.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/interface.c -o $(OBJDIR_DEBUG)/interface.o
 
-$(OBJDIR_DEBUG)/callbacks.o: callbacks.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c callbacks.c -o $(OBJDIR_DEBUG)/callbacks.o
+$(OBJDIR_DEBUG)/callbacks.o: src/callbacks.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/callbacks.c -o $(OBJDIR_DEBUG)/callbacks.o
 
-$(OBJDIR_DEBUG)/main.o: main.c
-	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c main.c -o $(OBJDIR_DEBUG)/main.o
+$(OBJDIR_DEBUG)/main.o: src/main.c
+	$(CC) $(CFLAGS_DEBUG) $(INC_DEBUG) -c src/main.c -o $(OBJDIR_DEBUG)/main.o
 
 $(OBJDIR_DEBUG)/ressource.res: $(RESSOURCE)
 	$(WINDRES) -i $(RESSOURCE) --input-format=rc -o $(OBJDIR_DEBUG)/ressource.res  -O coff
@@ -94,17 +94,17 @@ release: before_release out_release after_release
 out_release: before_release $(OBJ_RELEASE) $(DEP_RELEASE)
 	$(LD) $(LIBDIR_RELEASE) -o $(OUT_RELEASE) $(OBJ_RELEASE)  $(LDFLAGS_RELEASE) $(LIB_RELEASE)
 
-$(OBJDIR_RELEASE)/gtk_repere.o: gtk_repere.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c gtk_repere.c -o $(OBJDIR_RELEASE)/gtk_repere.o
+$(OBJDIR_RELEASE)/gtk_repere.o: src/gtk_repere.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/gtk_repere.c -o $(OBJDIR_RELEASE)/gtk_repere.o
 
-$(OBJDIR_RELEASE)/interface.o: interface.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c interface.c -o $(OBJDIR_RELEASE)/interface.o
+$(OBJDIR_RELEASE)/interface.o: src/interface.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/interface.c -o $(OBJDIR_RELEASE)/interface.o
 
-$(OBJDIR_RELEASE)/callbacks.o: callbacks.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c callbacks.c -o $(OBJDIR_RELEASE)/callbacks.o
+$(OBJDIR_RELEASE)/callbacks.o: src/callbacks.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/callbacks.c -o $(OBJDIR_RELEASE)/callbacks.o
 
-$(OBJDIR_RELEASE)/main.o: main.c
-	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c main.c -o $(OBJDIR_RELEASE)/main.o
+$(OBJDIR_RELEASE)/main.o: src/main.c
+	$(CC) $(CFLAGS_RELEASE) $(INC_RELEASE) -c src/main.c -o $(OBJDIR_RELEASE)/main.o
 
 $(OBJDIR_RELEASE)/ressource.res: $(RESSOURCE)
 	$(WINDRES) -i $(RESSOURCE) --input-format=rc -o $(OBJDIR_RELEASE)/ressource.res  -O coff
