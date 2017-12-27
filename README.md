@@ -3,6 +3,8 @@ Snell-Descartes
 
 Visualisation de la transmission d'une onde à l'interface entre 2 milieux.
 
+![Application screenshot](/Snell-Descartes.png?raw=true)
+
 Installation :
 --------------
 
