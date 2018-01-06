@@ -22,9 +22,10 @@
 #define __CALLBACKS_H__
 
 #include <gtk/gtk.h>
+#include "interface.h"
 
 #define STR_SIZE	16
-#define VITESSE_MIN		10
+#define VITESSE_MIN		1
 #define VITESSE_MAX		300000000
 
 void check_arcs_clicked(GtkEditable *editable, gpointer user_data);
@@ -33,15 +34,21 @@ void check_refracte_clicked(GtkEditable *editable, gpointer user_data);
 
 gboolean barre_incident_change_value(GtkRange *range, GtkScrollType scroll, gdouble value, gpointer user_data);
 void entree_incident_changed(GtkEditable *editable, gpointer user_data);
+void computeIncident( Widgets *widgets, const gchar *sIncident );
 
 gboolean barre_V1_change_value(GtkRange *range, GtkScrollType scroll, gdouble value, gpointer user_data);
 void entree_V1_changed(GtkEditable *editable, gpointer user_data);
+void computeV1( Widgets *widgets, const gchar *sV1 );
 
 gboolean barre_V2_change_value(GtkRange *range, GtkScrollType scroll, gdouble value, gpointer user_data);
 void entree_V2_changed(GtkEditable *editable, gpointer user_data);
+void computeV2( Widgets *widgets, const gchar *sV2 );
 
 
 void ErreurNumerique( gpointer user_data );
 void ErreurValeur( gpointer user_data );
+
+void readValues( Widgets *widgets );
+void updateValues( Widgets *widgets );
 
 #endif

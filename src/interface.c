@@ -247,13 +247,13 @@ GtkWidget* create_window (void)
 	g_signal_connect ((gpointer) widget->check_refracte, "clicked", G_CALLBACK (check_refracte_clicked), widget);
 
 	g_signal_connect ((gpointer) widget->barre_incident, "change-value", G_CALLBACK (barre_incident_change_value), widget);
-	g_signal_connect ((gpointer) widget->entree_incident, "changed", G_CALLBACK (entree_incident_changed), widget);
+	g_signal_connect ((gpointer) widget->entree_incident, "activate", G_CALLBACK (entree_incident_changed), widget);
 
 	g_signal_connect ((gpointer) widget->barre_V1, "change_value", G_CALLBACK (barre_V1_change_value), widget);
-	g_signal_connect ((gpointer) widget->entree_V1, "changed", G_CALLBACK (entree_V1_changed), widget);
+	g_signal_connect ((gpointer) widget->entree_V1, "activate", G_CALLBACK (entree_V1_changed), widget);
 
 	g_signal_connect ((gpointer) widget->barre_V2, "change_value", G_CALLBACK (barre_V2_change_value), widget);
-	g_signal_connect ((gpointer) widget->entree_V2, "changed", G_CALLBACK (entree_V2_changed), widget);
+	g_signal_connect ((gpointer) widget->entree_V2, "activate", G_CALLBACK (entree_V2_changed), widget);
 
 	g_signal_connect ((gpointer) widget->repere, "configure-event", G_CALLBACK (configure_event_cb), widget);
 

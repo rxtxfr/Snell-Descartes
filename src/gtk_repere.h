@@ -85,7 +85,8 @@ void gtk_draw_incident(GtkWidget *rep, cairo_t *local_cr);
 void gtk_draw_reflechi(GtkWidget *rep, cairo_t *local_cr);
 void gtk_draw_refracte(GtkWidget *rep, cairo_t *local_cr);
 
-double computeRefracted( GtkWidget *rep );
+gdouble computeReflected( GtkRepere *rep );
+gdouble computeRefracted( GtkRepere *rep );
 
 void setIncident( GtkRepere *widget, gdouble angle);
 const gdouble getIncident( GtkRepere *widget );

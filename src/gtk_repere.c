@@ -310,7 +310,16 @@ void gtk_draw_refracte(GtkWidget *rep, cairo_t *local_cr){
 		gtk_repere_update(rep);
 }
 
-double computeRefracted( GtkWidget *rep ){
+gdouble computeReflected( GtkRepere *rep ){
+
+	gdouble angleIncident = getIncident( GTK_REPERE( rep ) );
+
+	setReflected( GTK_REPERE( rep ), angleIncident);
+    
+    return angleIncident;
+}
+
+gdouble computeRefracted( GtkRepere *rep ){
 
 
 	gdouble v1 = getSpeed1( GTK_REPERE( rep ) );
